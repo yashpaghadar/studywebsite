@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_course.css') }}">
+</head>
+<body>
+    <header>
+        {{ course.title }}
+    </header>
+    <main>
+        <p>{{ course.description }}</p> 
+        <p>Course content will be available soon.</p>
+        
+        <!-- Video -->
+        <video controls>
+            <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Back to Courses Button -->
+        <a href="/" class="btn">Back to Courses</a>
+    </main>
+</body>
+</html>
